@@ -1,1 +1,1 @@
-program that prints the numbers of base 16 in lowercase, followed by anew line
+program that prints all possible combinations of single-digit numbers
