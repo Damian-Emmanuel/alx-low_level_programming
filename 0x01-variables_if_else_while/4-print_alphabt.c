@@ -3,18 +3,14 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Succes)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    char ch;
-    for (ch = 'a'; ch <= 'z'; ch++)
-    {
-        if (ch != 'q' && ch != 'e')
-        {
-            putchar(ch);
-	}
-    }
-    putchar(10);
-    return (0);
-}    
+int i;
+for (i = 97; i < 123; i++)
+if (i != 101 && i != 113)
+putchar(i);
+putchar(10);
+return (0);
+}
