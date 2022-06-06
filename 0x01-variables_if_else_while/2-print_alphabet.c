@@ -1,19 +1,14 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
- * main - assign a random number to the variable n each time it is executed and prints out based a condition
- * Return : Always 0 (Sucess)
+ * main - Entry point
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int ch;
-	for (ch = 97; ch <= 122; ch++)
-	{
-		putchar(ch);
-	}	
-	putchar(10); /* this is an ascii code for new line */
-
-	return (0);
+int i;
+for (i = 97; i < 122; i++)
+	putchar(i);	
+putchar(10);
+return (0);
 }	
