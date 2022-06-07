@@ -10,7 +10,7 @@ int j;
 
 for (j = 'a'; j <= 'z'; j++)
 {
-	_putchar(j);
+_putchar(j);
 }
 putchar('\n');
 }
