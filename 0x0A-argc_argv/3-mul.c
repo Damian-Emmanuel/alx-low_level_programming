@@ -4,18 +4,18 @@
 
 /**
  * main - prints the multiplication of two integers
- * @argc: count argument
+ * @argc: argument count
  * @argv: argument vector
  *
  * Return: 0 if true, 1 if false
  */
-int main(int main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 int a, b;
 if (argc == 3)
 {
 a = atoi(argv[1]);
-b = atoi(argv[1]);
+b = atoi(argv[2]);
 printf("%s\n", a *b);
 return (0);
 }
