@@ -16,7 +16,7 @@ if (argc == 1)
 {
 a = atoi(argv[1]);
 b = atoi(argv[2]);
-printf("%s\n", a *b);
+printf("%d\n", a *b);
 return (0);
 }
 printf("Error\n");
