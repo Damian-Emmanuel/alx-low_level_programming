@@ -45,7 +45,7 @@ return (dest);
  * Return: pointer
  */
 
-char *strdup(char *str)
+char *_strdup(char *str)
 {
 char *dst;
 unsigned int size;
