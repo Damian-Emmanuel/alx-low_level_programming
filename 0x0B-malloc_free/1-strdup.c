@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _strlen - count array
- * @n: array of elements
+ * @s: array of elements
  * Return: 1
  */
 
