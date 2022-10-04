@@ -48,7 +48,7 @@ int count_words(char *str)
 	{
 		if (*(str + index) != ' ')
 		{
-			words++
+			words++;
 			index += word_len(str + index);
 		}
 	}
@@ -88,7 +88,7 @@ char **strtow(char *str)
 
 		strings[w] = malloc(sizeof(char) * (letters + 1));
 
-		if (string[w] == NULL)
+		if (strings[w] == NULL)
 		{
 			for (; w >= 0; w--)
 				free(strings[w]);
