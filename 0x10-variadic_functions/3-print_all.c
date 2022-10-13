@@ -25,7 +25,7 @@ void print_s(va_list s)
 
 	if (str == NULL)
 		str = "(nil)";
-	prints("%s", str);
+	printf("%s", str);
 }
 
 /**
