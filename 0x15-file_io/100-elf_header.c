@@ -138,7 +138,7 @@ void print_osabi(unsigned char *e_ident)
 	switch (e_ident[EI_OSABI])
 	{
 	case ELFOSABI_NONE:
-		printf("UNIX - System v\n");
+		printf("UNIX - System V\n");
 		break;
 	case ELFOSABI_HPUX:
 		printf("UNIX - HP-UX\n");
@@ -147,7 +147,7 @@ void print_osabi(unsigned char *e_ident)
 		printf("UNIX - NetBSD\n");
 		break;
 	case ELFOSABI_LINUX:
-		printf("UINX - Linux\n");
+		printf("UNIX - Linux\n");
 		break;
 	case ELFOSABI_SOLARIS:
 		printf("UNIX - Solaris\n");
@@ -217,7 +217,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 }
 
 /**
- * print-entry - Prints the entry point of an ELF header.
+ * print_entry - Prints the entry point of an ELF header.
  * @e_entry: The address of the ELF entry point.
  * @e_ident: A pointer to an array containing the ELF class.
  */
