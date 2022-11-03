@@ -53,9 +53,9 @@ void close_file(int fd)
  * Return: 0 on success.
  *
  * Description: If the argument count is incorrect - exit code 97.
- *              If file_from does not exit or cannot be read - exit code 98.
- *              If file_to cannot be created or written to - exit code .
- *              If file_to or file_from cannot be closed - exit code 100.
+ *          If file_from does not exit or cannot be read - exit code 98.
+ *          If file_to cannot be created or written to - exit code .
+ *          If file_to or file_from cannot be closed - exit code 100.
  */
 int main(int argc, char *argv[])
 {
@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 	buffer = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	r = read(from, buffer, 1024);
-	to = open(argv[2], O_CREAT | O_TRUNC, 0664);
+	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
 		if (from == -1 || r == -1)
