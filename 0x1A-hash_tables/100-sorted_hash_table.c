@@ -52,6 +52,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
+
 	value_copy = strdup(value);
 	if (value_copy == NULL)
 		return (0);
@@ -74,7 +75,14 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	{
 
 		free(value_copy);
-		return (0);	
+		return (0);
+	}
+	new->key = strdup(key);
+	if (new == NULL)
+	{
+		free(value_copy);
+		free(new);
+		return (0);
 	}
 	new->value = value_copy;
 	new->next = ht->array[index];
@@ -107,7 +115,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 			tmp->snext->sprev = new;
 		tmp->snext = new;
 	}
-	
+
 	return (1);
 }
 
@@ -127,7 +135,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
-	
+
 	index = key_index((const unsigned char *)key, ht->size);
 	if (index >= ht->size)
 		return (NULL);
@@ -209,4 +217,4 @@ void shash_table_delete(shash_table_t *ht)
 
 	free(head->array);
 	free(head);
-}	
+}
